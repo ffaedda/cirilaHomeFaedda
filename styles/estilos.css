@@ -17,6 +17,7 @@
     grid-template-areas: "header"
                          "seccionArribaMain"
                          "seccionMain"
+                         "contenedorImagenesHome"
                          "seccionArribaFooter"
                          "footer";
 }
@@ -113,10 +114,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    font-family: 'Alegreya Sans SC', sans-serif;
     background: linear-gradient(225deg, rgba(36,0,36,1) 0%, rgb(249, 209, 209) 0%, rgba(255,238,238,1) 100%);
     grid-area: seccionAbajoMain;
     height: 30vh;
+    
 }
 
 .seccionIzquierdaMain{
@@ -135,6 +137,14 @@ main{
     grid-area: seccionDerechaMain;
     height: 70vh;
     width: 30vw;
+}
+
+.contenedorImagenesHome{
+    display: flex;
+    background: linear-gradient(225deg, rgba(36,0,36,1) 0%, rgba(244,238,238,1) 0%, rgba(255,238,238,1) 100%);
+    grid-area: contenedorImagenesHome;
+    justify-content: center;
+    height: 40vh;
 }
 
 .seccionArribaFooter{
@@ -296,6 +306,7 @@ footer{
     margin: 1.5rem;
     font-size: 2.5rem;
     text-shadow: 1px 1px white;
+    color: #b9123e;
 }
 
 .tituloSecundarioContactenos{
@@ -329,7 +340,7 @@ footer{
     padding: 0.2rem;
     margin: 0.5rem;
     width: 5rem;
-    background-color: #089FE0;
+    background-color:#b9123e;
     color: white;
     border-radius: 0.3rem;
     border: none;
@@ -347,9 +358,145 @@ footer{
 /* estilos de la page producto */
 .productoVideo{
     width: 40rem; 
-    height: 25rem;
+    height: 20rem;
 }
 
+.parrafoMainProducto{
+    margin: 1rem;
+}
+
+.tituloProducto{
+    color: #b9123e;
+}
+
+
+/* main */
+.contenedorImagenesHome{
+    display: flex;
+}
+
+.tituloHome{
+    color: #b9123e;
+}
+
+.subtituloHome{
+    color: #b83659;
+}
+
+.imagenesManteles{
+    border-radius: 1rem;
+    width: 80%;
+}
+
+/* Nuestra historia */
+
+.mainNuestraHistoria .contenedorNuestraHistoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elementoNuestraHistoria{
+    margin: 2rem;
+    width: 25rem;
+}
+
+.tituloNuestraHistoria{
+    font-size: 2rem;
+    color: #b9123e;
+}
+
+.imagenNuestraHistoria{
+    border-radius: 2rem;
+}
+
+
+.contenedorElemNuestrosClientes{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.elementoNuestroCliente{
+    display: flex;
+    margin: 1rem
+}
+
+/* promociones */
+
+.tituloPromociones{
+    color: #b9123e;
+}
+
+.imagenDescuento{
+    border-radius: 1rem;
+    margin: 0.2rem;
+}
+
+/* Venta por mayor */
+
+.tituloVentaMayor{
+    color: #b9123e;
+}
+
+.imagenVentaMayor{
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+
+
+/* politica de cambio y devolucion*/
+
+.tiluloPoliticaCambio{
+    margin:0.5rem;
+    color: #b9123e;
+}
+
+.subtituloPoliticaCambio{
+    margin-bottom: 1rem;
+    color: #b83659;
+}
+
+.contenedorPoliticaCambioDevol{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+
+/* politica de envío */
+
+.tituloPoliticaEnvío{
+    color: #b9123e;
+}
+
+.subtituloPoliticaEnvío{
+    margin:1rem;
+    color: #b83659;
+}
+
+.parrafoPoliticaEnvio{
+    width: 40rem;
+    text-align: left;
+}
+
+/* preguntas frecuentes */
+
+.tituloPreguntasFrecuentes{
+    color: #b9123e;
+}
+
+.subtituloPreguntaFrecuente{
+    color: #b83659;
+}
+
+.respuestaPreguntaFrecuente{
+    margin-top: 1rem;
+    text-align: left;
+}
 
 
 /* -- media queries - Mobile -- */
@@ -361,6 +508,7 @@ footer{
     .contenedorPrincipal{
         grid-template-areas: "header"
                              "seccionMain"
+                             "contenedorImagenesHome"
                              "seccionArribaFooter"
                              "footer";
     }
@@ -382,22 +530,22 @@ footer{
                              "footer";
     }
 
-    
+
     /* header */
 
     header{
         display: flex;
         flex-direction: column;
         justify-content: center;    
-        align-items: space-around;
-        height: 30vh;
+        align-items: center;
+        height: 50vh;
     }
 
     .menu ul li{
         display: flex;
         flex-direction: column;
         font-size: 0.8rem;
-        background-image: linear-gradient(45deg, #ff9a9e 0%, #fdcbbd 99%, #fad0c4 100%);
+        background-image: linear-gradient(45deg, #ff9a9e 0%, #fdcbbd 99%, #fad0c4 100%);     
     }
 
     .logoTipo{
@@ -407,7 +555,7 @@ footer{
     /* footer */ 
 
     .linea{
-        width: 7rem;
+        width: 6rem;
       }
 
 
@@ -431,12 +579,70 @@ footer{
     .seccionDerechaMain{
         height: 0vh;
     }
-}
 
+    .seccionArribaMain{
+        display: none;
+    }
+
+    .parrafosHome{
+        margin: 0.5rem;
+        width: 10rem;
+    }
+  
+    .subtituloHome{
+        width: 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .seccionArribaFooter{
+        font-size: 0.7rem;
+    }
+
+    .opcionesFooter{
+        font-size: 0.7rem;
+    }
+    
+    .apoyo{
+        display: none;
+    }
+
+    .derechoAutor{
+        display: none;
+    }
+
+    .imagenesManteles{
+        width: 80%;
+    }
+ 
+    .contenedorImagenesHome{
+        height: 3.5rem;
+    }
+ 
+}
 
 /* -- media queries - Tablet -- */
 
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    .contenedorPrincipal{
+        height: 100vh;
+        width: 100vw;
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "header"
+                             "seccionArribaMain"
+                             "seccionMain"
+                             "contenedorImagenesHome"
+                             "seccionArribaFooter"
+                             "footer";
+    }
+
+
+    .contenedorImagenesHome{
+        background: linear-gradient(225deg, rgba(36,0,36,1) 0%, rgb(245, 220, 220) 0%, rgba(255,238,238,1) 100%);
+        grid-area: contenedorImagenesHome;
+    }
 
     /* header */
 
